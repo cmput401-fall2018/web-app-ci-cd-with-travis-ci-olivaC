@@ -1,2 +1,3 @@
 def test_print():
-    print("testing")
+    print("testing")def test_b():
+    assert False
