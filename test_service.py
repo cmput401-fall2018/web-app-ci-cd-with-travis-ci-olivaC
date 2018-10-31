@@ -2,7 +2,7 @@ from unittest import TestCase
 
 import mock
 
-from frontend.service import Service
+from service import Service
 
 return_value = [20]
 div_value = [5]
