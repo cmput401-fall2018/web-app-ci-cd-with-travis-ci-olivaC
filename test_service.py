@@ -19,7 +19,7 @@ class ServiceTest(TestCase):
         Tests the bad_random function for Service.
         """
 
-        assert self.service.bad_random() == 15
+        assert self.service.bad_random() == 20
 
     @mock.patch('service.Service.bad_random', return_value=return_value[0])
     def test_service_divide(self, x):
@@ -36,7 +36,7 @@ class ServiceTest(TestCase):
 
         # Tests y > 0
         y = self.service.divide(1)
-        assert y == 15
+        assert y == 20
 
     def test_service_abs_plus(self):
         """
