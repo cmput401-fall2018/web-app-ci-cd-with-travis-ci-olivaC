@@ -13,7 +13,7 @@ class ServiceTest(TestCase):
     def setUp(self):
         self.service = Service()
 
-    @mock.patch('frontend.service.Service.bad_random', return_value=return_value[0])
+    @mock.patch('service.Service.bad_random', return_value=return_value[0])
     def test_service_bad_random(self, x):
         """
         Tests the bad_random function for Service.
@@ -21,7 +21,7 @@ class ServiceTest(TestCase):
 
         assert self.service.bad_random() == 15
 
-    @mock.patch('frontend.service.Service.bad_random', return_value=return_value[0])
+    @mock.patch('service.Service.bad_random', return_value=return_value[0])
     def test_service_divide(self, x):
         """
         Tests for the divide(x) function for Service.
@@ -52,8 +52,8 @@ class ServiceTest(TestCase):
         # Test x == 0
         assert self.service.abs_plus(0) == 1
 
-    @mock.patch('frontend.service.Service.bad_random', return_value=return_value[0])
-    @mock.patch('frontend.service.Service.divide', return_value=return_value[0])
+    @mock.patch('service.Service.bad_random', return_value=return_value[0])
+    @mock.patch('service.Service.divide', return_value=return_value[0])
     def test_service_complicated_function(self, x, y):
         """
         Tests the complicated function for Service.
